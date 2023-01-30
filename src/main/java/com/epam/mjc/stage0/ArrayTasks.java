@@ -1,7 +1,5 @@
 package com.epam.mjc.stage0;
 
-import java.util.Arrays;
-
 /**
  * Here are the tasks for working with the arrays.
  * <p>
@@ -13,8 +11,7 @@ public class ArrayTasks {
      * Return a String[] array that will list all the seasons of the year, starting with winter.
      */
     public String[] seasonsArray() {
-        String[] seasons;
-        return seasons = new String[]{"winter", "spring", "summer", "autumn"};
+        return new String[]{"winter", "spring", "summer", "autumn"};
     }
 
     /**
@@ -39,8 +36,12 @@ public class ArrayTasks {
      * arr = [1, 3, 5]   -> sum = 9
      * arr = [5, -3, -4] -> sum = -2
      */
-    public int totalSum(int[] arr) {
-        return Arrays.stream(arr).sum();
+    public int totalSum(int[] arr){
+        int sum = 0;
+        for (int j : arr) {
+            sum += j;
+        }
+        return sum;
     }
 
     /**
